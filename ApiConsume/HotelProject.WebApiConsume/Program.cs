@@ -35,7 +35,16 @@ builder.Services.AddScoped<ISubscribeService, SubscribeManager>();
 builder.Services.AddScoped<IRoomDal, EfRoomDal>();
 builder.Services.AddScoped<IRoomService, RoomManager>();
 
+builder.Services.AddCors(opt =>
+{ 
+    opt.AddPolicy("OtelApiCors", opts =>
 
+{
+    opts.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+
+});
+
+});
 
 
 
@@ -51,9 +60,6 @@ builder.Services.AddScoped<IRoomService, RoomManager>();
 var app = builder.Build();
 
 
-
-
-
 // Configure the HTTP request pipeline.
 
 if (app.Environment.IsDevelopment())
@@ -61,7 +67,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors("OtelApiCors");
 app.UseAuthorization();
 
 app.MapControllers();
