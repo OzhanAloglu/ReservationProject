@@ -10,7 +10,7 @@
    @* <div class="container-xxl bg-white p-0">*@
         <!-- Spinner Start -->
    @await Component.InvokeAsync("_SpinnerPartial")
-        <!-- Spinner End -->
+        <!-- Spinner End -->s
 
         <!-- Header Start -->
     
@@ -60,7 +60,7 @@
 
 
         <!-- Newsletter Start -->
-    @await Component.InvokeAsync("_SubscribePartial")
+    @await Html.PartialAsync("_SubscribePartial")
         <!-- Newsletter Start -->
         
 
