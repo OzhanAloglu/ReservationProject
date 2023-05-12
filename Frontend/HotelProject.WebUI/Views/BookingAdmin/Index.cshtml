@@ -35,10 +35,11 @@
                             <tr>
                                                 <th>@count</th>
                                                 <td>@item.Name</td>
-                                                   <td> @item.Checkhin</td>
-                                                   <td> @item.Checkout</td>
+                                                   <td> @(((DateTime)item.Checkhin).ToString("dd-MMMM-yyyy"))</td>
+                                                   <td> @(((DateTime)item.Checkout).ToString("dd-MMMM-yyyy"))</td>
+                                                  
                                                 <td><span class="badge badge-primary px-2">@item.Status</span>   </td>
-                                                <td><a href="#" class="btn btn-outline-success">Onayla</a>   </td>
+                                                <td><a href="/BookingAdmin/ApprovedReservartion/@item.BookingID" class="btn btn-outline-success">Onayla</a>   </td>
                                                 <td><a href="#" class="btn btn-outline-danger">İptal Et</a>   </td>
                                                 <td><a href="#" class="btn btn-outline-warning">Beklet</a>   </td>
                                                 <td><a href="#" class="btn btn-outline-primary">Güncelle</a>   </td>
