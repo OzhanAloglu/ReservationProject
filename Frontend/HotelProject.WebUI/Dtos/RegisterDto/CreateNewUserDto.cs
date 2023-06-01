@@ -17,6 +17,10 @@ namespace HotelProject.WebUI.Dtos.RegisterDto
         public string Mail { get; set; }
 
         [Required(ErrorMessage = "Şifre Alanı Gereklidir.")]
+
+        public string City { get; set; }
+
+        [Required(ErrorMessage = "Şehir Alanı Gereklidir.")]
         public string Password { get; set; }
         [Required(ErrorMessage = "Şifre Tekrar Alanı Gereklidir.")]
 
