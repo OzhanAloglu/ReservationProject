@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HotelProject.DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230605194318_mig_add_WorkLocation")]
-    partial class mig_add_WorkLocation
+    [Migration("20230605204905_mig_add_workls")]
+    partial class mig_add_workls
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

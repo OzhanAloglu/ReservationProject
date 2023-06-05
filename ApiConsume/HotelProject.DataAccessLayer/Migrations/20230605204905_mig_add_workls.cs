@@ -5,7 +5,7 @@
 namespace HotelProject.DataAccessLayer.Migrations
 {
     /// <inheritdoc />
-    public partial class mig_add_WorkLocation : Migration
+    public partial class mig_add_workls : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
