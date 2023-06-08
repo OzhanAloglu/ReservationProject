@@ -37,7 +37,7 @@ namespace HotelProject.WebUI.Controllers
                 City = createNewUserDto.City,
                 PhoneNumber = createNewUserDto.PhoneNumber.ToString(),
                 WorkDepartment = "Hr",
-                ImageUrl = "asdjasfjaksf",
+                ImageUrl = "/adminTheme/images/avatar/1.jpg",
                 WorkLocationID=1
             };
             var result=await _userManager.CreateAsync(appUser,createNewUserDto.Password);
