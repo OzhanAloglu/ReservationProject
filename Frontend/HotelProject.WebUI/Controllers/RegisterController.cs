@@ -30,12 +30,15 @@ namespace HotelProject.WebUI.Controllers
             }
             var appUser = new AppUser()
             {
-                Name= createNewUserDto.Name,
-                Email=createNewUserDto.Mail,
-                Surname=createNewUserDto.Surname,
-                UserName=createNewUserDto.Username,
-                City=createNewUserDto.City,
-                WorkLocationID=createNewUserDto.WorkLocationID
+                Name = createNewUserDto.Name,
+                Email = createNewUserDto.Mail,
+                Surname = createNewUserDto.Surname,
+                UserName = createNewUserDto.Username,
+                City = createNewUserDto.City,
+                PhoneNumber = createNewUserDto.PhoneNumber.ToString(),
+                WorkDepartment = "Hr",
+                ImageUrl = "asdjasfjaksf",
+                WorkLocationID=1
             };
             var result=await _userManager.CreateAsync(appUser,createNewUserDto.Password);
             if (result.Succeeded)
