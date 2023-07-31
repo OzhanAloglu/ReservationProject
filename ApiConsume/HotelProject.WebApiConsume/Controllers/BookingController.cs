@@ -56,6 +56,8 @@ namespace HotelProject.WebApiConsume.Controllers
             return Ok(values);
         }
 
+
+
         [HttpPut("ReservationStatus")]
         public IActionResult ReservationStatus(Booking booking)
         {
@@ -77,5 +79,15 @@ namespace HotelProject.WebApiConsume.Controllers
           var values=  _bookingService.TLast6Bookings();
             return Ok(values);
         }
+
+
+        [HttpGet("ReservationBookingAproved")]
+
+        public IActionResult ReservationBookingAproved(int id)
+        {
+            _bookingService.TBookingStatusChangeApproved3(id);
+            return Ok();
+        }
+
     }
 }
